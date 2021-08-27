@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation , Redirect  } from "react-router-dom";
-import Avatar from '../components/Avatar.jsx';
-import Carousel from '../components/Carousel.jsx';
+import Avatar from '../components/Avatar.js';
+import Carousel from '../components/Carousel.js';
 import MyYoutubChannel from '../MyYoutubChannel.js';
 
 

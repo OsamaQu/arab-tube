@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Link } from "react-router-dom";
 
-import YoutubePalyerPage from '../pages/YoutubePalyerPage.jsx';
-import VideoListPage from '../pages/VideoListPage.jsx';
-import HomePage from '../pages/HomePage.jsx';
+import YoutubePalyerPage from '../pages/YoutubePalyerPage.js';
+import VideoListPage from '../pages/VideoListPage.js';
+import HomePage from '../pages/HomePage.js';
 
-import YoutubeVedio from './YoutubeVedio.jsx';
-import Thumpnail from './Thumpnail.jsx';
-import Header from "./Header.jsx";
+import YoutubeVedio from './YoutubeVedio.js';
+import Thumpnail from './Thumpnail.js';
+import Header from "./Header.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

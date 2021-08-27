@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Thumpnail from '../components/Thumpnail.jsx';
+import Thumpnail from '../components/Thumpnail.js';
 // import Header from "../components/Header";
-import YoutubePalyerPage from './YoutubePalyerPage.jsx';
+import YoutubePalyerPage from './YoutubePalyerPage.js';
 import { Route, Link } from "react-router-dom";
 import { useLocation , Redirect  } from "react-router-dom";
 
