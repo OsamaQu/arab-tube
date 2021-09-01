@@ -16,18 +16,21 @@ function HomePage (){
 
     <Carousel/>
 
+
+ <div className= "avatarsDiv">
+
   {MyYoutubChannel.map((item) => {
 
    return (
      <div className= "noteDiv">
-      <Avatar  key={item.id} imgUlr={item.imageUrl}  playlistUrl={item.playlistUrl}  playlistUrl={item.playlistUrl} name={item.name}      />
+      <Avatar  key={item.id} imgUlr={item.imageUrl}  playlistUrl={item.playlistUrl}  playlistUrl={item.playlistUrl} name={item.name} />
       </div>
 
 
     );
 
     })}
-
+    </div>
 
     </div>
 

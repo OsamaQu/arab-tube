@@ -1,55 +1,95 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useHistory } from "react-router-dom";
+
 
 
 
 
 function ControlledCarousel() {
+  let history = useHistory();
+
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
+  function  handleDaniaaClick(){
+    history.push({
+    pathname: '/video_List',
+      state: { playlistUrl: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PUtm3DGXkWqAUQZMHl97SVxA&key=AIzaSyBZCpOfe-s2Pa_SASOkCtVEvKxUy3eDYUs"
+}
+    });
+
+  }
+
+function  handleNastyaClick(){
+    history.push({
+    pathname: '/video_List',
+      state: { playlistUrl:"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PU3I1iohrGzxep0p8r1Osw3w&key=AIzaSyBZCpOfe-s2Pa_SASOkCtVEvKxUy3eDYUs"
+}
+    });
+
+  }
+
+function  handleMaxClick(){
+    history.push({
+    pathname: '/video_List',
+      state: { playlistUrl: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PUcdwLMPsaU2ezNSJU1nFoBQ&key=AIzaSyBZCpOfe-s2Pa_SASOkCtVEvKxUy3eDYUs"
+}
+    });
+
+  }
+
+function  handleRayanClick(){
+    history.push({
+    pathname: '/video_List',
+      state: { playlistUrl: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PUhGJGhZ9SOOHvBB0Y4DOO_w&key=AIzaSyBZCpOfe-s2Pa_SASOkCtVEvKxUy3eDYUs"
+}
+    });
+
+  }
+
   return (
     <Carousel className = "Carousel" activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
+
+
+    <Carousel.Item  onClick= {handleMaxClick}>
+      <img
+        className="d-block w-100"
+        src="https://yt3.ggpht.com/15J5VYoT5WVczuF0mYD_gGYdUhqdIVgdBW4S0tij8xCMRsr8FLG6yLbWbTLyJBkD8JSe3x75ofw=w1440-fcrop64=1,32b75a57cd48a5a8-k-c0xffffffff-no-nd-rj"
+        alt="Pinkfong Kids' Songs & Stories"
+      />
+
+    </Carousel.Item>
+      <Carousel.Item  onClick= {handleNastyaClick}>
         <img
           className="d-block w-100"
-          src="https://www.bootstrapbayblog.com/wp-content/uploads/2014/07/bootstrap-carousel1.png"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://www.bootstrapbayblog.com/wp-content/uploads/2014/07/bootstrap-carousel1.png"
-          alt="Second slide"
+          src="https://i.ibb.co/GdW90B7/channels4-banner-1.jpg"
+          alt="Like Nastya - ستايسي"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item  onClick= {handleDaniaaClick}>
         <img
           className="d-block w-100"
-          src="https://www.bootstrapbayblog.com/wp-content/uploads/2014/07/bootstrap-carousel1.png"
-          alt="Third slide"
+          src="https://i.ibb.co/mXRdTXk/channels4-banner-2.jpg"
+          alt="Dania and Roma - ديانا وروما"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+
+      </Carousel.Item>
+
+
+      <Carousel.Item onClick= {handleRayanClick}>
+        <img
+          className="d-block w-100"
+          src="https://i.ibb.co/M2Jr9pY/channels4-banner.jpg"
+          alt="Rayan World - عالم ريان"
+        />
+
       </Carousel.Item>
     </Carousel>
   );

@@ -2,35 +2,63 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+}
+html {
+      scroll-behavior: smooth;
 }
 
 body {
   background: #eee;
   padding: 0;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 header {
-  background-color: #ea1d00;
+  background-color: #FF2E63;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99;
 }
 
 header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  cursor: pointer;
+  display: inline-block;
+
+
+}
+.headerImge{
+  width: 40px;
+  margin-bottom: 25px;
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+
+
+
+
 }
 
 
 .Carousel{
 top: 80px;
+padding-bottom: 100px;
+}
+
+.avatarsDiv{
+  text-align: center;
 }
 
 .maenContener {
-  width: 80%;
+  width: 90%;
   margin: 60px auto;
   text-align: center;
 
@@ -41,13 +69,26 @@ top: 80px;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 640px;
-  margin: 16px;
-  float: left;
+  width: 720px;
+  margin: 24px;
+  text-align: center;
+  display: inline-block;
+  font: -webkit-small-control;
+  cursor: pointer;
+
+  display: inline-block;
+  vertical-align: top;
+
+
+
+
 }
 
 .note h1 {
-  font-family: 'Lalezar', cursive;
+  color: #252A34;
+  padding-top: 30px;
+  font-size: 32px;
+
 }
 
 .note img {
@@ -64,23 +105,86 @@ top: 80px;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 220px;
-  margin: 160px 50px 50px 50px ;
+  width: 250px;
+  margin: 50px ;
   text-align: center;
+  cursor: pointer;
+
 
 }
 .note2 h1 {
+  color: #252A34;
+  padding-top: 25px;
   font-size: 24px;
 }
 
 .circle-img {
   border-radius: 50%;
-  border: 7px solid #fff;
-  width: 120px;
-  height: 120px;
+  border: 7px solid #EAEAEA;
+  width: 180px;
+  height: 180px;
 }
 
 .noteDiv{
   display:inline-block;
 
 }
+
+.videoListPage{
+  margin-top: 100px;
+
+}
+
+
+
+footer {
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+
+
+.carousel-control-next-icon {
+  background-image: url(https://image.flaticon.com/icons/png/512/271/271228.png) !important;
+  height: 3rem !important;
+  width: 3rem !important;
+
+}
+
+
+.carousel-control-prev-icon {
+
+  background-image: url(https://image.flaticon.com/icons/png/512/271/271220.png) !important;
+  height: 3rem !important;
+  width: 3rem !important;
+
+}
+
+
+.carousel-indicators {
+
+    bottom: 100px !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #000  !important;
+
+}
+
+.carousel-control-next, .carousel-control-prev,
+.carousel-control-prev, .carousel-control-prev
+ {
+
+   width: 10% !important;
+ }
+
+
+
+ .YouTubeItem{
+   margin-top: 28px;
+ }

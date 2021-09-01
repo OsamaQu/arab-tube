@@ -27,8 +27,12 @@ useEffect(() => {
    .then(response => response.json())
    .then((jsonData) => {
 
-     const {items}= jsonData;
-     const moshaya=  items.map((item)=>{
+     let {items}= jsonData;
+     console.log(items);
+     const items2 =shuffleArray(items);
+     console.log(items2);
+
+     const moshaya=  items2.map((item)=>{
 
      const{snippet}= item;
      const{thumbnails}=snippet;
@@ -40,7 +44,6 @@ useEffect(() => {
    }=thumbnails;
    const {url ="https://i.ytimg.com/vi/-jVgr_AnrRE/maxresdefault.jpg"}=maxres;
 
-     console.log(thumbnails);
 
 
 
@@ -64,15 +67,27 @@ useEffect(() => {
 }, []);
 
 
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+
+}
+
+
 return(
 
-  <div>
+  <div className="videoListPage">
 
   {itemObj.map((item) => {
 
  return (
 
-    <Thumpnail  key={item.id} id={item.id}  thumpanil={item.thumbnailUrl} title= {item.title} />
+    <Thumpnail  key={item.id} id={item.id}  thumpanil={item.thumbnailUrl} title= {item.title} videoList ={itemObj}   isItInPlayPage = {false}/>
 
   );
   })}
